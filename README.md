@@ -1,2 +1,0 @@
-tekconf.mobile.net
-==================
