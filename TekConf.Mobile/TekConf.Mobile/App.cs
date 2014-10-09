@@ -1,25 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
+using Xamarin;
 
 namespace TekConf.Mobile
 {
-	public class App
+	public static class App
 	{
+		private const string insightsKey = "768f9b41f49256602c240442a598e946bfdc3d07";
+
 		public static Page GetMainPage()
 		{
-			return new ContentPage
-			{
-				Content = new Label
-				{
-					Text = "Hello, Forms !",
-					VerticalOptions = LayoutOptions.CenterAndExpand,
-					HorizontalOptions = LayoutOptions.CenterAndExpand,
-				},
-			};
+			Insights.Initialize(insightsKey);
+			Insights.Track ("Page.GetMainPage");
+
+
+
+			return new ConferencesPage ();
 		}
 	}
 }

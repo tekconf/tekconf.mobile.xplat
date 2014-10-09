@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:ConferencesPageBase 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:TekConf.Mobile;assembly=TekConf.Mobile" 
+	x:Class="TekConf.Mobile.ConferencesPage">
+
+	<ContentPage.Padding>
+        <OnPlatform 
+            x:TypeArguments="Thickness" 
+            iOS="5,20,5,5" 
+            Android="5,0,5,5" 
+            WinPhone="5,0,5,5" />
+    </ContentPage.Padding>
+
+    <ListView ItemsSource="{Binding Conferences}">
+		<ListView.ItemTemplate>
+       		<DataTemplate>
+            	<TextCell Text="{Binding Name}"></TextCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</local:ConferencesPageBase>
