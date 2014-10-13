@@ -1,4 +1,5 @@
 using Xamarin.Forms;
+using Ninject;
 
 namespace TekConf.Mobile
 {
@@ -15,8 +16,11 @@ namespace TekConf.Mobile
 
 		public ViewPage ()
 		{
-			_viewModel = new T ();
-			BindingContext = _viewModel;
+			_viewModel = App.Container.Get<T> ();
+			if (_viewModel != null) {
+				_viewModel.Navigation = this.Navigation;
+				BindingContext = _viewModel;
+			}
 		}
 	}	
 }

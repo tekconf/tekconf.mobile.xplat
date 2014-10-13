@@ -58,5 +58,26 @@
 		<string>MKDirectionsModeTaxi</string>
 		<string>MKDirectionsModeTrain</string>
 	</array>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>appicon</string>
+		<string>Icon@2x</string>
+		<string>Icon-60@2x</string>
+		<string>Icon-72</string>
+		<string>appicon-72@2x</string>
+		<string>appicon-76</string>
+		<string>appicon-76@2x</string>
+		<string>appicon-Small</string>
+		<string>appicon-Small@2x</string>
+		<string>appicon-Small-50</string>
+		<string>appicon-Small-50@2x</string>
+		<string>appicon-Small-40</string>
+		<string>appicon-Small-40@2x</string>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>OpenSans-Light.ttf</string>
+		<string>OpenSans-Regular.ttf</string>
+	</array>
 </dict>
 </plist>

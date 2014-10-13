@@ -114,6 +114,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <Compile Include="Data\SQLiteClient.cs" />
+    <Compile Include="IoC.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TekConf.Mobile\TekConf.Mobile.csproj">
@@ -155,6 +156,12 @@
     <Reference Include="SQLite.Net.Platform.XamarinIOS">
       <HintPath>..\..\packages\SQLite.Net.Platform.XamarinIOS.2.4.1\lib\monotouch\SQLite.Net.Platform.XamarinIOS.dll</HintPath>
     </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\..\packages\Portable.Ninject.3.3\lib\monotouch\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="ModernHttpClient">
+      <HintPath>..\..\packages\modernhttpclient.2.1.2\lib\MonoTouch\ModernHttpClient.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
@@ -172,5 +179,71 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
+    <Folder Include="CustomRenderers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\appicon.png" />
+    <BundleResource Include="Resources\appicon%402x.png" />
+    <BundleResource Include="Resources\appicon-60.png" />
+    <BundleResource Include="Resources\appicon-60%402x.png" />
+    <BundleResource Include="Resources\appicon-60%403x.png" />
+    <BundleResource Include="Resources\appicon-72.png" />
+    <BundleResource Include="Resources\appicon-72%402x.png" />
+    <BundleResource Include="Resources\appicon-76.png" />
+    <BundleResource Include="Resources\appicon-76%402x.png" />
+    <BundleResource Include="Resources\appicon-Small.png" />
+    <BundleResource Include="Resources\appicon-Small%402x.png" />
+    <BundleResource Include="Resources\appicon-Small%403x.png" />
+    <BundleResource Include="Resources\appicon-Small-40.png" />
+    <BundleResource Include="Resources\appicon-Small-40%402x.png" />
+    <BundleResource Include="Resources\appicon-Small-50.png" />
+    <BundleResource Include="Resources\appicon-Small-50%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Default-667h%402x.png" />
+    <BundleResource Include="Resources\Default-Landscape.png" />
+    <BundleResource Include="Resources\Default-Landscape%402x.png" />
+    <BundleResource Include="Resources\Default-Landscape-736%403x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait-736%403x.png" />
+    <BundleResource Include="Resources\OpenSans-Bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\OpenSans-BoldItalic.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\OpenSans-ExtraBold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\OpenSans-ExtraBoldItalic.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\OpenSans-Italic.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\OpenSans-Light.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\OpenSans-LightItalic.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\OpenSans-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\OpenSans-Semibold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\OpenSans-SemiboldItalic.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Icon%402x.png" />
+    <BundleResource Include="Resources\Icon-72.png" />
+    <BundleResource Include="Resources\Icon-60%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="Resources\iTunesArtwork" />
+    <ITunesArtwork Include="Resources\iTunesArtwork%402x" />
   </ItemGroup>
 </Project>

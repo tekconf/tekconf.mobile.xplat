@@ -1,12 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Xamarin.Forms;
-using Xamarin;
-using PropertyChanged;
-using System.Windows.Input;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,52 +6,60 @@ using TekConf.Mobile.Models;
 using TekConf.Mobile.Services;
 using AutoMapper;
 using System.Collections.ObjectModel;
-
+using Ninject;
+using System;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace TekConf.Mobile
 {
-	//	[ImplementPropertyChanged]
-	//	public class UserViewModel : IViewModel
-	//	{
-	//		public string FirstName { get; set; }
-	//
-	//		public string LastName { get; set; }
-	//
-	//		public ICommand LoadUser {
-	//			get {
-	//				return new Command (async () => {
-	//					this.FirstName = "John";
-	//					this.LastName = "Doe";
-	//				});
-	//			}
-	//		}
-	//	}
-
 	[ImplementPropertyChanged]
-	public class ConferencesViewModel : IViewModel
+	public class ConferencesViewModel : ViewModelBase
 	{
-		readonly SQLiteClient _db;
+		private readonly SQLiteClient _db;
 
-		public ConferencesViewModel ()
+		public ConferencesViewModel () {}
+
+		[Inject]
+		[Insights]
+		public ConferencesViewModel (SQLiteClient client)
 		{
-			_db = new SQLiteClient ();
+			_db = client;
 		}
 
 		public ObservableCollection<Conference> Conferences { get; set; }
 
+		public bool IsLoading { get; set; }
+
+		public ICommand SelectConference {
+			get {
+				return new Command<Conference> (async (conference) => {
+					await Navigation.PushAsync(new ConferencePage(conference));
+				});
+			}
+		}
+
+		[Insights]
 		public async Task GetConferences ()
 		{
+			this.IsLoading = true;
+			//throw new ArgumentException ("Testing getconferences");
+
 			await GetLocalConferences ();
 			await GetRemoteConferences ();
 			await GetLocalConferences ();
+
+			this.IsLoading = false;
 		}
 
+		[Insights]
 		private async Task GetLocalConferences ()
 		{
 			var conferences = await _db.GetConferencesAsync ();
-			this.Conferences = new ObservableCollection<Conference>(conferences.OrderBy (x => x.Name).ToList ());
+			this.Conferences = new ObservableCollection<Conference> (conferences.OrderBy (x => x.Name).ToList ());
 		}
 
+		[Insights]
 		private async Task GetRemoteConferences ()
 		{
 			var remoteClient = new TekConfClient ();

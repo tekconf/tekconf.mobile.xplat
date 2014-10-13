@@ -5,6 +5,7 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Xamarin.Forms;
+using Xamarin;
 
 namespace TekConf.Mobile.iOS
 {
@@ -19,8 +20,12 @@ namespace TekConf.Mobile.iOS
 			Xamarin.Calabash.Start();
 			#endif
 
+			Insights.Initialize(App.InsightsKey);
+
 			var bootstrapper = new Bootstrapper ();
 			bootstrapper.Automapper ();
+
+			IoC.Initialize ();
 
 			Forms.Init();
 

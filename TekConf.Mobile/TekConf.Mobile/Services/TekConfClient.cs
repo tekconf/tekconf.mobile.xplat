@@ -6,18 +6,21 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using AutoMapper;
 using Newtonsoft.Json;
+using ModernHttpClient;
 
 namespace TekConf.Mobile.Services
 {
 	public class TekConfClient
 	{
+		[Insights]
 		public async Task<List<Models.Conference>> GetConferences ()
 		{
 			IEnumerable<Dtos.Conference> conferenceDtos = Enumerable.Empty<Dtos.Conference> ();
 			IEnumerable<Models.Conference> conferences = Enumerable.Empty<Models.Conference> ();
 
 			using (var httpClient = CreateClient ()) {
-				var response = await httpClient.GetAsync ("conferences").ConfigureAwait (false);
+				var response = await httpClient.GetAsync ("conferences?showPastConferences=true").ConfigureAwait (false);
+
 				if (response.IsSuccessStatusCode) {
 					var json = await response.Content.ReadAsStringAsync ().ConfigureAwait (false);
 					if (!string.IsNullOrWhiteSpace (json)) {
@@ -37,9 +40,10 @@ namespace TekConf.Mobile.Services
 
 		private const string ApiBaseAddress = "http://api.tekconf.com/v1/";
 
+		[Insights]
 		private HttpClient CreateClient ()
 		{
-			var httpClient = new HttpClient { 
+			var httpClient = new HttpClient(new NativeMessageHandler()) { 
 				BaseAddress = new Uri (ApiBaseAddress)
 			};
 
@@ -50,4 +54,3 @@ namespace TekConf.Mobile.Services
 		}
 	}
 }
-

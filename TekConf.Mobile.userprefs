@@ -1,18 +1,34 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.8.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TekConf.Mobile/TekConf.Mobile/Pages/ConferencesPage.xaml">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (KitKat)" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TekConf.Mobile/TekConf.Mobile.Android/MainActivity.cs">
     <Files>
-      <File FileName="TekConf.Mobile/TekConf.Mobile/Pages/ConferencesPage.xaml" Line="1" Column="1" />
-      <File FileName="TekConf.Mobile/TekConf.Mobile/ViewModels/ConferencesViewModel.cs" Line="4" Column="4" />
-      <File FileName="TekConf.Mobile/TekConf.Mobile.iOS/AppDelegate.cs" Line="19" Column="19" />
-      <File FileName="TekConf.Mobile/TekConf.Mobile/App.cs" Line="4" Column="4" />
-      <File FileName="TekConf.Mobile/TekConf.Mobile/Pages/ConferencesPage.xaml.cs" Line="2" Column="2" />
+      <File FileName="TekConf.Mobile/TekConf.Mobile.Android/MainActivity.cs" Line="17" Column="17" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="TekConf.Mobile" expanded="True">
+            <Node name="Pages" expanded="True" />
+          </Node>
+          <Node name="TekConf.Mobile.Android" expanded="True">
+            <Node name="Data" expanded="True" />
+            <Node name="Resources" expanded="True">
+              <Node name="drawable" expanded="True">
+                <Node name="Icon.png" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+          <Node name="TekConf.Mobile.iOS" expanded="True">
+            <Node name="Data" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/rob/dev/tekconf.mobile.xplat/Tests/TekConf.Mobile.Tests.UI/Test.cs" line="23" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="TekConf.Mobile/TekConf.Mobile/Misc/Bootstrapper.cs" line="20" offsetX="694" offsetY="272" expression="source.Position" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
 </Properties>

@@ -257,7 +257,7 @@ Global
 		{CF257DAD-EB38-406A-9AE6-CD7119EF2032}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = TekConf.Mobile\TekConf.Mobile.iOS\TekConf.Mobile.iOS.csproj
+		StartupItem = TekConf.Mobile\TekConf.Mobile.Android\TekConf.Mobile.Android.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

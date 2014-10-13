@@ -1,11 +1,10 @@
 ﻿using Xamarin.Forms;
-using DtoToVM.Android.Data;
 using System;
-using DtoToVM.Data;
 using SQLite.Net.Async;
 using System.IO;
 using SQLite.Net.Platform.XamarinAndroid;
 using SQLite.Net;
+using TekConf.Mobile.Android.Data;
 
 [assembly: Dependency (typeof(SQLiteClient))]
 namespace TekConf.Mobile.Android.Data
@@ -14,7 +13,7 @@ namespace TekConf.Mobile.Android.Data
 	{
 		public SQLiteAsyncConnection GetConnection ()
 		{
-			var sqliteFilename = "Conferences.db3";
+			const string sqliteFilename = "Conferences.db3";
 			var documentsPath = Environment.GetFolderPath (Environment.SpecialFolder.Personal);
 
 			var path = Path.Combine (documentsPath, sqliteFilename);
