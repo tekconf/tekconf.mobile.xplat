@@ -1,29 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (KitKat)" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.8.0" />
   <MonoDevelop.Ide.Workbench ActiveDocument="TekConf.Mobile/TekConf.Mobile.Android/MainActivity.cs">
     <Files>
-      <File FileName="TekConf.Mobile/TekConf.Mobile.Android/MainActivity.cs" Line="17" Column="17" />
+      <File FileName="TekConf.Mobile/TekConf.Mobile.Android/MainActivity.cs" Line="4" Column="4" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="TekConf.Mobile" expanded="True">
-            <Node name="Pages" expanded="True" />
-          </Node>
-          <Node name="TekConf.Mobile.Android" expanded="True">
-            <Node name="Data" expanded="True" />
-            <Node name="Resources" expanded="True">
-              <Node name="drawable" expanded="True">
-                <Node name="Icon.png" selected="True" />
-              </Node>
-            </Node>
-          </Node>
-          <Node name="TekConf.Mobile.iOS" expanded="True">
-            <Node name="Data" expanded="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
