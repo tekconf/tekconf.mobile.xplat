@@ -13,7 +13,8 @@ namespace TekConf.Mobile
 		[Insights]
 		public static Page GetMainPage ()
 		{
-			return new NavigationPage (new ConferencesPage ());
+			return new MainPage ();
+			//return new NavigationPage (new ConferencesPage ());
 		}
 	}
 }

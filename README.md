@@ -17,3 +17,6 @@ We use [Github issues](https://github.com/tekconf/tekconf.mobile.xplat/issues) +
 
 Looking for something to jump in and help with? Look for the [up-for-grabs](http://up-for-grabs.net/) label. We accept pull requests!
 
+# Get in contact #
+
+Questions? Contact Rob Gibbens on twitter [@RobGibbens](http://twitter.com/RobGibbens)
