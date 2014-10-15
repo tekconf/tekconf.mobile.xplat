@@ -3,14 +3,6 @@ using Ninject;
 
 namespace TekConf.Mobile
 {
-	public class MainPage : TabbedPage
-	{
-		public MainPage ()
-		{
-			var conferencesPage = new ConferencesPage ();
-			this.Children.Add (conferencesPage);
-		}
-	}
 
 	public class ViewPage<T> : ContentPage where T:IViewModel, new()
 	{

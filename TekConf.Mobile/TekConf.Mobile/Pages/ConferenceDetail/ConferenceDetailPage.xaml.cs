@@ -4,19 +4,21 @@ using TekConf.Mobile.Models;
 
 namespace TekConf.Mobile
 {	
-	public partial class ConferencePage : ConferencePageBase
+	public class ConferenceDetailPageBase :  ViewPage<ConferenceViewModel>{}
+
+	public partial class ConferenceDetailPage : ConferenceDetailPageBase
 	{
 		[Insights]
-		public ConferencePage ()
+		public ConferenceDetailPage ()
 		{
 			InitializeComponent ();
 
 			Init ();
 		}
-			
+
 		[Insights]
 		[Inject]
-		public ConferencePage (Conference conference) : this()
+		public ConferenceDetailPage (Conference conference) : this()
 		{
 			this.ViewModel.Conference = conference;
 			this.Title = this.ViewModel.Conference.Name;

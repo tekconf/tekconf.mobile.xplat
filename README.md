@@ -15,7 +15,9 @@ We use [Github issues](https://github.com/tekconf/tekconf.mobile.xplat/issues) +
 
 # Contributing #
 
-Looking for something to jump in and help with? Look for the [up-for-grabs](http://up-for-grabs.net/) label. We accept pull requests!
+Looking for something to jump in and help with? Look for the [up-for-grabs](http://up-for-grabs.net/) label. (We're still filling out the issues backlog) If you're good at UI/UX design, and want to contribute an overall design, we'd __LOVE__ that! 
+
+We accept pull requests!
 
 # Get in contact #
 

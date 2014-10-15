@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="TekConf.Mobile.MainPage"
+	xmlns:local="clr-namespace:TekConf.Mobile;assembly=TekConf.Mobile" 
+	Title="Main Page">
+
+	<local:ConferencesPage></local:ConferencesPage>
+	<local:ConferencesSchedulePage></local:ConferencesSchedulePage>
+</TabbedPage>

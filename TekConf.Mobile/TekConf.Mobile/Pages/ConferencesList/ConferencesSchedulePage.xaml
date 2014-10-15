@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:ConferencesSchedulePageBase 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:TekConf.Mobile;assembly=TekConf.Mobile" 
+	x:Class="TekConf.Mobile.ConferencesSchedulePage"
+	Title="Schedule">
+
+</local:ConferencesSchedulePageBase>

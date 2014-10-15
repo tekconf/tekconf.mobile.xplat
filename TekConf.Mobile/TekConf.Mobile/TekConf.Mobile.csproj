@@ -36,9 +36,6 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Pages\ConferencesPage.xaml.cs">
-      <DependentUpon>ConferencesPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Models\Conference.cs" />
     <Compile Include="Dtos\Address.cs" />
     <Compile Include="Dtos\Speaker.cs" />
@@ -55,16 +52,30 @@
     <Compile Include="Misc\InsightsAttribute.cs" />
     <Compile Include="Misc\IMethodDecorator.cs" />
     <Compile Include="AsyncErrorHandler.cs" />
-    <Compile Include="Pages\ConferencesPageBase.cs" />
     <Compile Include="Pages\Styles.cs" />
-    <Compile Include="Pages\ConferencePage.xaml.cs">
-      <DependentUpon>ConferencePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\ConferencePageBase.cs" />
     <Compile Include="ViewModels\ConferenceViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="CustomControls\ListItemTitleLabel.cs" />
     <Compile Include="CustomControls\ListItemDefaultLabel.cs" />
+    <Compile Include="ViewModels\ConferencesScheduleViewModel.cs" />
+    <Compile Include="Pages\ContentViews\ConferencesCell.xaml.cs">
+      <DependentUpon>ConferencesCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ConferencesList\ConferencesPage.xaml.cs">
+      <DependentUpon>ConferencesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ConferencesList\ConferencesSchedulePage.xaml.cs">
+      <DependentUpon>ConferencesSchedulePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ConferencesList\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ConferenceDetail\ConferenceDetailPage.xaml.cs">
+      <DependentUpon>ConferenceDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ConferenceDetail\ConferencePage.xaml.cs">
+      <DependentUpon>ConferencePage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
@@ -142,6 +153,9 @@
     <Folder Include="Misc\" />
     <Folder Include="Data\" />
     <Folder Include="CustomControls\" />
+    <Folder Include="Pages\ContentViews\" />
+    <Folder Include="Pages\ConferencesList\" />
+    <Folder Include="Pages\ConferenceDetail\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="FodyWeavers.xml">
@@ -149,10 +163,22 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\ConferencesPage.xaml">
+    <EmbeddedResource Include="Pages\ContentViews\ConferencesCell.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\ConferencePage.xaml">
+    <EmbeddedResource Include="Pages\ConferencesList\ConferencesPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ConferencesList\ConferencesSchedulePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ConferencesList\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ConferenceDetail\ConferenceDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ConferenceDetail\ConferencePage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>

@@ -14,13 +14,7 @@
 				x:Name="conferencesList" RowHeight="150">
 			<ListView.ItemTemplate>
 				<DataTemplate>
-					<ViewCell>
-						<StackLayout Padding="10,0,5,0">
-							<c:ListItemTitleLabel Text="{Binding Name}" />
-							<c:ListItemDefaultLabel Text="{Binding DateRange}" />
-							<c:ListItemDefaultLabel Text="{Binding Location}" />
-						</StackLayout>
-					</ViewCell>
+					<local:ConferencesCell></local:ConferencesCell>
 				</DataTemplate>
 			</ListView.ItemTemplate>
 		</ListView>

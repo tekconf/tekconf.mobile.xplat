@@ -3,6 +3,8 @@ using TekConf.Mobile.Models;
 
 namespace TekConf.Mobile
 {
+	public class ConferencesPageBase :  ViewPage<ConferencesViewModel>{}
+
 	public partial class ConferencesPage : ConferencesPageBase
 	{
 		[Insights]
