@@ -2,6 +2,8 @@
 using Android.Content.PM;
 using Android.OS;
 using Xamarin.Forms.Platform.Android;
+using Xamarin;
+using Xamarin.Forms;
 
 namespace TekConf.Mobile.Droid
 {
@@ -16,9 +18,9 @@ namespace TekConf.Mobile.Droid
 			bootstrapper.Automapper ();
 
 			IoC.Initialize ();
-			Xamarin.Insights.Initialize (App.InsightsKey, this);
+			Insights.Initialize (App.InsightsKey, this);
 
-			Xamarin.Forms.Forms.Init (this, bundle);
+			Forms.Init (this, bundle);
 
 			SetPage (App.GetMainPage ());
 		}

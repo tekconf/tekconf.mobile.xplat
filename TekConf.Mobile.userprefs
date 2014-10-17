@@ -1,8 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.8.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TekConf.Mobile/TekConf.Mobile/Pages/ConferenceDetail/ConferencePage.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TekConf.Mobile/TekConf.Mobile/Pages/ConferenceDetail/ConferenceDetailPage.xaml">
     <Files>
-      <File FileName="TekConf.Mobile/TekConf.Mobile/Pages/ConferenceDetail/ConferencePage.xaml" Line="33" Column="33" />
+      <File FileName="TekConf.Mobile/TekConf.Mobile/Pages/ConferenceDetail/ConferenceDetailPage.xaml" Line="17" Column="17" />
+      <File FileName="TekConf.Mobile/TekConf.Mobile/Pages/ConferencesList/ConferencesPage.xaml" Line="2" Column="2" />
+      <File FileName="TekConf.Mobile/TekConf.Mobile/Pages/ConferencesList/MainPage.xaml" Line="14" Column="14" />
+      <File FileName="TekConf.Mobile/TekConf.Mobile/Pages/ContentViews/ConferencesCell.xaml" Line="26" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

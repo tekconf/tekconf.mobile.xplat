@@ -31,11 +31,10 @@ namespace TekConf.Mobile
 
 		public bool IsLoading { get; set; }
 
-
 		public ICommand SelectConference {
 			get {
 				return new Command<Conference> (async (conference) => {
-					await Navigation.PushAsync(new ConferencePage(conference));
+					await Navigation.PushAsync(new ConferenceDetailPage(conference));
 				});
 			}
 		}

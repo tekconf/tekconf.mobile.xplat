@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Xamarin.Forms;
@@ -28,6 +27,7 @@ namespace TekConf.Mobile.iOS
 			IoC.Initialize ();
 
 			Forms.Init();
+			FormsMaps.Init();
 
 			window = new UIWindow(UIScreen.MainScreen.Bounds);
 

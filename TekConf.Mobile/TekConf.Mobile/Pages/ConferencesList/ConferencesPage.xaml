@@ -10,8 +10,7 @@
 	<StackLayout>
 		<Label Text="Loading" IsVisible="{Binding IsLoading}" />
 	
-		<ListView ItemsSource="{Binding Conferences}" 
-				x:Name="conferencesList" RowHeight="150">
+		<ListView ItemsSource="{Binding Conferences}" x:Name="conferencesList" RowHeight="150">
 			<ListView.ItemTemplate>
 				<DataTemplate>
 					<local:ConferencesCell></local:ConferencesCell>
