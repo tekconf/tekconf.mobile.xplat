@@ -32,6 +32,8 @@ namespace TekConf.Mobile
 			using (await Mutex.LockAsync ().ConfigureAwait (false)) {
 				await _asyncConnection.CreateTableAsync<Conference> ().ConfigureAwait (false);
 				await _asyncConnection.CreateTableAsync<Session> ().ConfigureAwait (false);
+				await _asyncConnection.CreateTableAsync<Speaker> ().ConfigureAwait (false);
+				await _asyncConnection.CreateTableAsync<SessionSpeaker> ().ConfigureAwait (false);
 			}
 		}
 
@@ -60,11 +62,9 @@ namespace TekConf.Mobile
 
 				if (existingConference == null) {
 					await Task.Run (() => _syncConnection.InsertWithChildren (conference)).ConfigureAwait(false);
-					//await _connection.InsertAsync (conference).ConfigureAwait (false);
 				} else {
 					conference.Id = existingConference.Id;
-
-					await _asyncConnection.UpdateAsync (conference).ConfigureAwait (false);
+					await Task.Run (() => _syncConnection.InsertOrReplaceWithChildren (conference)).ConfigureAwait(false);
 				}
 			}
 		}

@@ -34,7 +34,7 @@ namespace TekConf.Mobile.Services
 					}
 				}
 			}
-
+				
 			return conferences.ToList ();
 		}
 
@@ -43,7 +43,7 @@ namespace TekConf.Mobile.Services
 		[Insights]
 		private HttpClient CreateClient ()
 		{
-			var httpClient = new HttpClient(new NativeMessageHandler()) { 
+			var httpClient = new HttpClient (new NativeMessageHandler ()) { 
 				BaseAddress = new Uri (ApiBaseAddress)
 			};
 

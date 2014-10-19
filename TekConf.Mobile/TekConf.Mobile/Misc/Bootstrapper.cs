@@ -12,6 +12,8 @@ namespace TekConf.Mobile
 				.ForMember(dest => dest.Longitude, opt => opt.ResolveUsing<LongitudeResolver>());
 
 			Mapper.CreateMap<Dtos.Session, Models.Session> ();
+
+			Mapper.CreateMap<Dtos.Speaker, Models.Speaker> ();
 		}
 	}
 

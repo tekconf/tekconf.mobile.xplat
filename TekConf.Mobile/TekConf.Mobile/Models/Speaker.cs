@@ -1,11 +1,14 @@
-using System;
 using System.Collections.Generic;
+using SQLite.Net.Attributes;
+using SQLiteNetExtensions.Attributes;
 
-namespace TekConf.Mobile.Dtos
+namespace TekConf.Mobile.Models
 {
-
 	public class Speaker
 	{
+		[PrimaryKey, AutoIncrement, Column ("_id")]
+		public int Id { get; set; }
+
 		public string Slug { get; set; }
 
 		public string ProfileImageUrl { get; set; }
@@ -21,6 +24,8 @@ namespace TekConf.Mobile.Dtos
 		public string TwitterName { get; set; }
 
 		public string FullName { get; set; }
-	}
 
+		[ManyToMany(typeof(SessionSpeaker))]
+		public List<Session> Sessions { get; set; } 
+	}	
 }

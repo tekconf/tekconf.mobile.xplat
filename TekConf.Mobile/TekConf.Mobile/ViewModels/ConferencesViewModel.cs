@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using PropertyChanged;
 using TekConf.Mobile.Models;
 using TekConf.Mobile.Services;
-using AutoMapper;
 using System.Collections.ObjectModel;
 using Ninject;
 using System;
@@ -43,7 +42,6 @@ namespace TekConf.Mobile
 		public async Task GetConferences ()
 		{
 			this.IsLoading = true;
-			//throw new ArgumentException ("Testing getconferences");
 
 			await GetLocalConferences ();
 			await GetRemoteConferences ();
@@ -56,6 +54,7 @@ namespace TekConf.Mobile
 		private async Task GetLocalConferences ()
 		{
 			var conferences = await _db.GetConferencesAsync ();
+
 			this.Conferences = new ObservableCollection<Conference> (conferences.OrderBy (x => x.Name).ToList ());
 		}
 
@@ -63,9 +62,11 @@ namespace TekConf.Mobile
 		private async Task GetRemoteConferences ()
 		{
 			var remoteClient = new TekConfClient ();
-			var dtos = await remoteClient.GetConferences ().ConfigureAwait (false);
-			var conferences = Mapper.Map<List<Conference>> (dtos);
-			await _db.SaveAll (conferences).ConfigureAwait (false);
+			List<Conference> conferences = await remoteClient.GetConferences ().ConfigureAwait (false);
+			var cm = conferences.Where (x => x.Name == "CodeMash 2014").ToList ();
+			//TODO: await _db.SaveAll (conferences).ConfigureAwait (false);
+			await _db.SaveAll (cm).ConfigureAwait (false);
+
 		}
 	}
 }

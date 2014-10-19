@@ -40,7 +40,6 @@ namespace TekConf.Mobile.Dtos
 
 		public List<string> Prerequisites { get; set; }
 
-		//public List<Speaker> Speakers { get; set; }
+		public List<Speaker> Speakers { get; set; }
 	}
-
 }

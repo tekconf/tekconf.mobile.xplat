@@ -5,10 +5,7 @@ using Xamarin.Forms.Maps;
 
 namespace TekConf.Mobile
 {
-	public class ConferenceDetailPageBase :  ViewPage<ConferenceViewModel>
-	{
-
-	}
+	public class ConferenceDetailPageBase :  ViewPage<ConferenceViewModel> {}
 
 	public partial class ConferenceDetailPage : ConferenceDetailPageBase
 	{
@@ -59,7 +56,7 @@ namespace TekConf.Mobile
 				conferenceLocationMap.MoveToRegion 
 				(
 					MapSpan.FromCenterAndRadius
-				(
+					(
 						new Position (
 							this.ViewModel.Conference.Latitude.Value, 
 							this.ViewModel.Conference.Longitude.Value

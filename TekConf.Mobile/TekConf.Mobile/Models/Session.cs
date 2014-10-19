@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System;
 using SQLite.Net.Attributes;
 using SQLiteNetExtensions.Attributes;
 
@@ -49,7 +47,7 @@ namespace TekConf.Mobile.Models
 		[ManyToOne]
 		public Conference Conference { get; set; }
 
-		//public List<Speaker> Speakers { get; set; }
+		[ManyToMany(typeof(SessionSpeaker))]
+		public List<Speaker> Speakers { get; set; } 
 	}
-	
 }
