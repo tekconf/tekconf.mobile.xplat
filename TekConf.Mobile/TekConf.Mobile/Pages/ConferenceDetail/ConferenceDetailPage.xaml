@@ -11,20 +11,25 @@
 	<ScrollView>
 		<StackLayout Padding="10,0,5,0">
 			<Image Source="{Binding Conference.ImageUrl}" HorizontalOptions="CenterAndExpand" />
-			<c:ListItemTitleLabel Text="{Binding Conference.Name}" HorizontalOptions="CenterAndExpand" />
-			<c:ListItemDefaultLabel Text="{Binding Conference.DateRange}" HorizontalOptions="CenterAndExpand" />
-			<c:ListItemDefaultLabel Text="{Binding Conference.Description}" />
-			<Button Text="Add to My Schedule" HorizontalOptions="CenterAndExpand" />
+			<c:ConferenceDetailTitleLabel Text="{Binding Conference.Name}" HorizontalOptions="FillAndExpand" />
+			<c:ListItemDefaultLabel Text="{Binding Conference.DateRange}" HorizontalOptions="FillAndExpand" />
+			<c:ListItemDefaultLabel Text="{Binding Conference.Description}" HorizontalOptions="FillAndExpand" />
+			<c:AddToScheduleButton Text="Add to My Schedule" HorizontalOptions="FillAndExpand" />
 			<!-- Map -->
 			<maps:Map WidthRequest="320" HeightRequest="200"
-	            x:Name="MyMap"
+	            x:Name="conferenceLocationMap"
 	            IsShowingUser="true" 
-	            MapType="Hybrid"
+	            MapType="Street"
 	        />
 
 			<!-- Speakers -->
 			<!-- Sessions -->
-			<ListView>
+			<ListView ItemsSource="{Binding Conference.Sessions}" x:Name="conferenceSessionsList">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<TextCell Text="{Binding Title}"></TextCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
 			</ListView>
 		</StackLayout>
 	</ScrollView>

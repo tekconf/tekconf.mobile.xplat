@@ -1,15 +1,20 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.8.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TekConf.Mobile/TekConf.Mobile/Pages/ConferenceDetail/ConferenceDetailPage.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TekConf.Mobile/TekConf.Mobile/ViewModels/ConferencesViewModel.cs">
     <Files>
-      <File FileName="TekConf.Mobile/TekConf.Mobile/Pages/ConferenceDetail/ConferenceDetailPage.xaml" Line="17" Column="17" />
-      <File FileName="TekConf.Mobile/TekConf.Mobile/Pages/ConferencesList/ConferencesPage.xaml" Line="2" Column="2" />
-      <File FileName="TekConf.Mobile/TekConf.Mobile/Pages/ConferencesList/MainPage.xaml" Line="14" Column="14" />
-      <File FileName="TekConf.Mobile/TekConf.Mobile/Pages/ContentViews/ConferencesCell.xaml" Line="26" Column="26" />
+      <File FileName="TekConf.Mobile/TekConf.Mobile/Pages/ConferenceDetail/ConferenceDetailPage.xaml" Line="20" Column="20" />
+      <File FileName="TekConf.Mobile/TekConf.Mobile/Pages/ConferenceDetail/ConferenceDetailPage.xaml.cs" Line="3" Column="3" />
+      <File FileName="TekConf.Mobile/TekConf.Mobile/ViewModels/ConferencesViewModel.cs" Line="4" Column="4" />
+      <File FileName="TekConf.Mobile/TekConf.Mobile/Dtos/Conference.cs" Line="3" Column="3" />
+      <File FileName="TekConf.Mobile/TekConf.Mobile/Dtos/Session.cs" Line="1" Column="1" />
+      <File FileName="TekConf.Mobile/TekConf.Mobile/Models/Conference.cs" Line="3" Column="3" />
+      <File FileName="TekConf.Mobile/TekConf.Mobile/Models/Session.cs" Line="19" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/rob/dev/tekconf.mobile.xplat/TekConf.Mobile/TekConf.Mobile/Pages/ConferenceDetail/ConferenceDetailPage.xaml.cs" line="40" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="TekConf.Mobile/TekConf.Mobile/Misc/Bootstrapper.cs" line="20" offsetX="694" offsetY="272" expression="source.Position" liveUpdate="False" />

@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System;
+using SQLite.Net.Attributes;
 
-namespace TekConf.Mobile.Dtos
+namespace TekConf.Mobile.Models
 {
-
 	public class Session
 	{
 		public string Slug { get; set; }
@@ -24,11 +25,9 @@ namespace TekConf.Mobile.Dtos
 
 		public string StartDescription { get; set; }
 
-
 		public DateTime? Start { get; set; }
 
 		public DateTime? End { get; set; }
-
 
 		public List<string> Links { get; set; }
 
@@ -40,7 +39,7 @@ namespace TekConf.Mobile.Dtos
 
 		public List<string> Prerequisites { get; set; }
 
-		public List<Speaker> Speakers { get; set; }
+		//public List<Speaker> Speakers { get; set; }
 	}
-
+	
 }

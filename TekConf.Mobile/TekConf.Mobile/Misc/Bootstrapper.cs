@@ -10,6 +10,8 @@ namespace TekConf.Mobile
 			Mapper.CreateMap<Dtos.Conference, Models.Conference> ()
 				.ForMember(dest => dest.Latitude, opt => opt.ResolveUsing<LatitudeResolver>())
 				.ForMember(dest => dest.Longitude, opt => opt.ResolveUsing<LongitudeResolver>());
+
+			Mapper.CreateMap<Dtos.Session, Models.Session> ();
 		}
 	}
 
@@ -17,12 +19,10 @@ namespace TekConf.Mobile
 	{
 		protected override double? ResolveCore(Dtos.Conference source)
 		{
-//			if (source == null || source.Position == null || !source.Position.Any ()) {
-//				return 0;
-//			}
-//			return source.Position[0];
-
-			return null;
+			if (source == null || source.Position == null || !source.Position.Any ()) {
+				return 0;
+			}
+			return source.Position[1];
 		}
 	}
 
@@ -30,12 +30,10 @@ namespace TekConf.Mobile
 	{
 		protected override double? ResolveCore(Dtos.Conference source)
 		{
-//			if (source == null || source.Position == null || !source.Position.Any ()) {
-//				return 0;
-//			}
-//			return source.Position[1];
-
-			return null;
+			if (source == null || source.Position == null || !source.Position.Any ()) {
+				return 0;
+			}
+			return source.Position[0];
 		}
 	}
 }

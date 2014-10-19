@@ -5,6 +5,17 @@ namespace TekConf.Mobile.Dtos
 {
 	public class Conference
 	{
+		public Conference ()
+		{
+			this.Sessions = new List<Session> { 
+				new Session {
+					Title = "Title 1"
+				},
+				new Session {
+					Title = "Title 2"
+				}
+			};
+		}
 		public string Slug { get; set; }
 		public string Name { get; set; }
 		public string Description { get; set; }

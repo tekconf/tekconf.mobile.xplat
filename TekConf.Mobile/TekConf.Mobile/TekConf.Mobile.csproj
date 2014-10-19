@@ -76,6 +76,9 @@
     <Compile Include="Pages\ConferenceDetail\ConferencePage.xaml.cs">
       <DependentUpon>ConferencePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\ConferenceDetailTitleLabel.cs" />
+    <Compile Include="CustomControls\AddToScheduleButton.cs" />
+    <Compile Include="Models\Session.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />

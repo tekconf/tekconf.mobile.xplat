@@ -43,9 +43,9 @@ namespace TekConf.Mobile.Models
 
 		public bool? IsOnline { get; set; }
 
-		public bool? Latitude { get; set; }
+		public double? Latitude { get; set; }
 
-		public bool? Longitude { get; set; }
+		public double? Longitude { get; set; }
 
 		public DateTime? Start { get; set; }
 
@@ -61,6 +61,8 @@ namespace TekConf.Mobile.Models
 
 		public DateTime? LastUpdated { get; set; }
 
+		[Ignore]
+		public List<Session> Sessions { get; set; }
 
 //		public List<string> Rooms { get; set; }
 //
@@ -70,7 +72,7 @@ namespace TekConf.Mobile.Models
 //
 //		public List<string> Tags { get; set; }
 
-		//public List<Session> Sessions { get; set; }
+
 		//public Address Address { get; set; }
 	}
 }

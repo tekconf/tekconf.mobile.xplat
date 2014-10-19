@@ -115,6 +115,7 @@
     <None Include="packages.config" />
     <Compile Include="Data\SQLiteClient.cs" />
     <Compile Include="IoC.cs" />
+    <Compile Include="CustomRenderers\AddToScheduleButtonRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TekConf.Mobile\TekConf.Mobile.csproj">
