@@ -50,7 +50,7 @@ namespace TekConf.Mobile
 				var pin = new Pin {
 					Type = PinType.Place,
 					Position = position,
-					Label = this.ViewModel.Conference.Location,
+					Label = this.ViewModel.Conference.Location ?? this.ViewModel.Conference.Name,
 					Address = this.ViewModel.Conference.FormattedAddress
 				};
 

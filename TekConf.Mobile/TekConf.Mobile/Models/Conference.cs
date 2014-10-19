@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System;
 using SQLite.Net.Attributes;
+using SQLiteNetExtensions.Attributes;
 
 namespace TekConf.Mobile.Models
 {
@@ -47,21 +48,21 @@ namespace TekConf.Mobile.Models
 
 		public double? Longitude { get; set; }
 
-		public DateTime? Start { get; set; }
+//		public DateTime? Start { get; set; }
+//
+//		public DateTime? End { get; set; }
+//
+//		public DateTime? CallForSpeakersOpens { get; set; }
+//
+//		public DateTime? CallForSpeakersCloses { get; set; }
+//
+//		public DateTime? RegistrationOpens { get; set; }
+//
+//		public DateTime? RegistrationCloses { get; set; }
+//
+//		public DateTime? LastUpdated { get; set; }
 
-		public DateTime? End { get; set; }
-
-		public DateTime? CallForSpeakersOpens { get; set; }
-
-		public DateTime? CallForSpeakersCloses { get; set; }
-
-		public DateTime? RegistrationOpens { get; set; }
-
-		public DateTime? RegistrationCloses { get; set; }
-
-		public DateTime? LastUpdated { get; set; }
-
-		[Ignore]
+		[OneToMany(CascadeOperations = CascadeOperation.All)]
 		public List<Session> Sessions { get; set; }
 
 //		public List<string> Rooms { get; set; }

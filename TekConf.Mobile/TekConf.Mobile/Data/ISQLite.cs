@@ -1,9 +1,12 @@
-﻿namespace TekConf.Mobile
+﻿using SQLite.Net;
+
+namespace TekConf.Mobile
 {
 	using SQLite.Net.Async;
 
 	public interface ISQLite 
 	{
-		SQLiteAsyncConnection GetConnection();
+		SQLiteAsyncConnection GetAsyncConnection();
+		SQLiteConnection GetSyncConnection();
 	}
 }

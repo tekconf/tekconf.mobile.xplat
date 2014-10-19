@@ -35,13 +35,13 @@ namespace TekConf.Mobile.Dtos
 		public bool? IsLive { get; set; }
 		public bool? IsOnline { get; set; }
 
-		public DateTime? Start { get; set; }
-		public DateTime? End { get; set; }
-		public DateTime? CallForSpeakersOpens { get; set; }
-		public DateTime? CallForSpeakersCloses { get; set; }
-		public DateTime? RegistrationOpens { get; set; }
-		public DateTime? RegistrationCloses { get; set; }
-		public DateTime? LastUpdated { get; set; }
+//		public DateTime? Start { get; set; }
+//		public DateTime? End { get; set; }
+//		public DateTime? CallForSpeakersOpens { get; set; }
+//		public DateTime? CallForSpeakersCloses { get; set; }
+//		public DateTime? RegistrationOpens { get; set; }
+//		public DateTime? RegistrationCloses { get; set; }
+//		public DateTime? LastUpdated { get; set; }
 
 		public List<double?> Position { get; set; }
 		public List<string> Rooms { get; set; }

@@ -11,7 +11,7 @@ namespace TekConf.Mobile.Android.Data
 {
 	public class SQLiteClient : ISQLite
 	{
-		public SQLiteAsyncConnection GetConnection ()
+		public SQLiteAsyncConnection GetAsyncConnection ()
 		{
 			const string sqliteFilename = "Conferences.db3";
 			var documentsPath = Environment.GetFolderPath (Environment.SpecialFolder.Personal);
@@ -25,6 +25,20 @@ namespace TekConf.Mobile.Android.Data
 				                         new SQLiteConnectionString (path, true));
 
 			var connection = new SQLiteAsyncConnection (() => connectionWithLock);
+
+			return connection;
+		}
+
+		public SQLiteConnection GetSyncConnection ()
+		{
+			const string sqliteFilename = "Conferences.db3";
+			var documentsPath = Environment.GetFolderPath (Environment.SpecialFolder.Personal);
+
+			var path = Path.Combine (documentsPath, sqliteFilename);
+
+			var platform = new SQLitePlatformAndroid ();
+
+			var connection = new SQLiteConnection (platform, path);
 
 			return connection;
 		}
