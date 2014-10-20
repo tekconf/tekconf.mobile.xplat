@@ -47,7 +47,10 @@ namespace TekConf.Mobile.Models
 		[ManyToOne]
 		public Conference Conference { get; set; }
 
-		[ManyToMany(typeof(SessionSpeaker))]
-		public List<Speaker> Speakers { get; set; } 
+		[OneToMany(CascadeOperations = CascadeOperation.All)]
+		public List<Speaker> Speakers { get; set; }
+
+//		[ManyToMany(typeof(SessionSpeaker))]
+//		public List<Speaker> Speakers { get; set; } 
 	}
 }

@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace TekConf.Mobile.Dtos
 {
 
@@ -22,5 +19,4 @@ namespace TekConf.Mobile.Dtos
 
 		public string FullName { get; set; }
 	}
-
 }

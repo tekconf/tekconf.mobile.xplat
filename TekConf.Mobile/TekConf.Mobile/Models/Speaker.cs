@@ -25,7 +25,13 @@ namespace TekConf.Mobile.Models
 
 		public string FullName { get; set; }
 
-		[ManyToMany(typeof(SessionSpeaker))]
-		public List<Session> Sessions { get; set; } 
+//		[ManyToMany(typeof(SessionSpeaker))]
+//		public List<Session> Sessions { get; set; } 
+
+		[ForeignKey(typeof(Session))]
+		public int SessionId { get; set; }
+
+		[ManyToOne]
+		public Session Session { get; set; }
 	}	
 }

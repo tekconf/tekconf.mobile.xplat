@@ -43,7 +43,7 @@ namespace TekConf.Mobile
 			await CreateDatabaseAsync ();
 			List<Conference> conferences = new List<Conference> ();
 			using (await Mutex.LockAsync ().ConfigureAwait (false)) {
-				conferences = await Task.Run(() => _syncConnection.GetAllWithChildren<Conference> ()).ConfigureAwait(false);
+				conferences = await Task.Run (() => _syncConnection.GetAllWithChildren<Conference> ()).ConfigureAwait (false);
 				//conferences = await _asyncConnection.Table<Conference> ().ToListAsync ().ConfigureAwait (false);
 			}
 
@@ -61,10 +61,25 @@ namespace TekConf.Mobile
 					.FirstOrDefaultAsync ();
 
 				if (existingConference == null) {
-					await Task.Run (() => _syncConnection.InsertWithChildren (conference)).ConfigureAwait(false);
+					await Task.Run (() => _syncConnection.InsertWithChildren (conference)).ConfigureAwait (false);
+					foreach (var session in conference.Sessions) {
+						foreach (var speaker in session.Speakers) {
+							speaker.Session = session;
+							speaker.SessionId = session.Id;
+							await Task.Run (() => _syncConnection.Insert (speaker)).ConfigureAwait (false);
+						}
+					}
+				
 				} else {
 					conference.Id = existingConference.Id;
-					await Task.Run (() => _syncConnection.InsertOrReplaceWithChildren (conference)).ConfigureAwait(false);
+					await Task.Run (() => _syncConnection.InsertOrReplaceWithChildren (conference)).ConfigureAwait (false);
+					foreach (var session in conference.Sessions) {
+						foreach (var speaker in session.Speakers) {
+							speaker.Session = session;
+							speaker.SessionId = session.Id;
+							await Task.Run (() => _syncConnection.InsertOrReplace (speaker)).ConfigureAwait (false);
+						}
+					}
 				}
 			}
 		}
