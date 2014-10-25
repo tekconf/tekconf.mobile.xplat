@@ -4,9 +4,13 @@ using Xamarin.Forms;
 using TekConf.Mobile.Controls;
 using TekConf.Mobile.iOS;
 using MonoTouch.UIKit;
+using Xamarin.Forms.Maps;
+using Xamarin.Forms.Maps.iOS;
+using MonoTouch.CoreLocation;
 
 
 [assembly:ExportRendererAttribute (typeof(PullToRefreshListView), typeof(PullToRefreshListViewRenderer))]
+
 
 namespace TekConf.Mobile.iOS
 {
@@ -23,7 +27,6 @@ namespace TekConf.Mobile.iOS
 	//			this.SetBackgroundColor (Color.Blue);
 	//		}
 	//	}
-
 	public class PullToRefreshListViewRenderer : ListViewRenderer
 	{
 		public PullToRefreshListViewRenderer ()

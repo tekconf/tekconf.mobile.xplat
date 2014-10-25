@@ -8,9 +8,7 @@
 	Title="Conferences">
 
 	<StackLayout x:Name="stack">
-		<Label Text="Loading" IsVisible="{Binding IsLoading}" />
-	
-		<c:PullToRefreshListView x:Name="conferencesList" RowHeight="150" 
+		<c:PullToRefreshListView x:Name="conferencesList" RowHeight="220" 
 					IsRefreshing="{Binding IsLoading}"
 					ItemsSource="{Binding Conferences}"
 					Message="loading...">

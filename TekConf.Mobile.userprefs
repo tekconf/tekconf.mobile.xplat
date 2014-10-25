@@ -1,13 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.8.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TekConf.Mobile/TekConf.Mobile/Pages/ConferencesList/ConferencesPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TekConf.Mobile/TekConf.Mobile/Pages/ContentViews/ConferencesCell.xaml">
     <Files>
-      <File FileName="TekConf.Mobile/TekConf.Mobile/Pages/ConferencesList/ConferencesPage.xaml.cs" Line="4" Column="4" />
-      <File FileName="TekConf.Mobile/TekConf.Mobile/Pages/ConferencesList/ConferencesPage.xaml" Line="2" Column="2" />
+      <File FileName="TekConf.Mobile/TekConf.Mobile/Pages/ConferenceDetail/ConferenceDetailPage.xaml" Line="4" Column="4" />
+      <File FileName="TekConf.Mobile/TekConf.Mobile.iOS/CustomRenderers/PullToRefreshListViewRenderer.cs" Line="24" Column="24" />
+      <File FileName="TekConf.Mobile/TekConf.Mobile.iOS/CustomRenderers/iOSMapRenderer.cs" Line="2" Column="2" />
+      <File FileName="TekConf.Mobile/TekConf.Mobile/Pages/ContentViews/ConferencesCell.xaml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/rob/dev/tekconf.mobile.xplat/TekConf.Mobile/TekConf.Mobile.iOS/CustomRenderers/iOSMapRenderer.cs" line="31" column="1" />
+      <Breakpoint file="/Users/rob/dev/tekconf.mobile.xplat/TekConf.Mobile/TekConf.Mobile.iOS/CustomRenderers/iOSMapRenderer.cs" line="20" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="TekConf.Mobile/TekConf.Mobile/Misc/Bootstrapper.cs" line="20" offsetX="694" offsetY="272" expression="source.Position" liveUpdate="False" />

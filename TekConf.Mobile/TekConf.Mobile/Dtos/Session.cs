@@ -25,9 +25,9 @@ namespace TekConf.Mobile.Dtos
 		public string StartDescription { get; set; }
 
 
-		//public DateTime? Start { get; set; }
+		public DateTime? Start { get; set; }
 
-		//public DateTime? End { get; set; }
+		public DateTime? End { get; set; }
 
 
 		public List<string> Links { get; set; }

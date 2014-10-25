@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using SQLite.Net.Attributes;
 using SQLiteNetExtensions.Attributes;
+using System;
 
 namespace TekConf.Mobile.Models
 {
@@ -27,9 +28,9 @@ namespace TekConf.Mobile.Models
 
 		public string StartDescription { get; set; }
 
-		//public DateTime? Start { get; set; }
+		public DateTime? Start { get; set; }
 
-		//public DateTime? End { get; set; }
+		public DateTime? End { get; set; }
 
 //		public List<string> Links { get; set; }
 //

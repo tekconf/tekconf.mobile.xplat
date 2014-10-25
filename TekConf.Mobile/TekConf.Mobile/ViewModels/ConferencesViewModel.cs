@@ -20,15 +20,15 @@ namespace TekConf.Mobile
 	{
 		private readonly SQLiteClient _db;
 
-		public ConferencesViewModel ()
-		{
-		}
+		public ConferencesViewModel () {}
 
 		[Inject]
 		[Insights]
 		public ConferencesViewModel (SQLiteClient client)
 		{
 			_db = client;
+			GetConferences ();
+
 		}
 
 		public List<Conference> Conferences { get; set; }
@@ -60,9 +60,7 @@ namespace TekConf.Mobile
 			this.IsLoading = true;
 			var remoteClient = new TekConfClient ();
 			List<Conference> conferences = await remoteClient.GetConferences ().ConfigureAwait (false);
-			await _db.SaveAll (conferences).ConfigureAwait (false);
-
-			Debug.WriteLine ("returning conferences");
+			//await _db.SaveAll (conferences).ConfigureAwait (false);
 
 			this.IsLoading = false;
 
@@ -72,12 +70,8 @@ namespace TekConf.Mobile
 		private Command _refreshCommand;
 		public Command RefreshCommand
 		{
-			get 
-			{ 
-				return _refreshCommand ?? 
-						(
-							_refreshCommand = new Command (async ()=> await GetConferences())
-						); 
+			get { 
+				return _refreshCommand ?? (_refreshCommand = new Command (async ()=> await GetConferences())); 
 			}
 		}
 	}

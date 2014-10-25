@@ -19,7 +19,8 @@ namespace TekConf.Mobile.Services
 			IEnumerable<Models.Conference> conferences = Enumerable.Empty<Models.Conference> ();
 
 			using (var httpClient = CreateClient ()) {
-				var response = await httpClient.GetAsync ("conferences?showPastConferences=true").ConfigureAwait (false);
+				//var response = await httpClient.GetAsync ("conferences?showPastConferences=true").ConfigureAwait (false);
+				var response = await httpClient.GetAsync ("conferences").ConfigureAwait (false);
 
 				if (response.IsSuccessStatusCode) {
 					var json = await response.Content.ReadAsStringAsync ().ConfigureAwait (false);

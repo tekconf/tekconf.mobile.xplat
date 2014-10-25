@@ -13,8 +13,11 @@ namespace TekConf.Mobile
 		[Insights]
 		public static Page GetMainPage ()
 		{
-			return new NavigationPage(new MainPage ());
-			//return new NavigationPage (new ConferencesPage ());
+			var navigationPage = new NavigationPage(new MainPage ());
+			navigationPage.BarBackgroundColor = Color.FromHex ("#72c02c"); 
+			navigationPage.BarTextColor = Color.White;
+
+			return navigationPage;
 		}
 	}
 }

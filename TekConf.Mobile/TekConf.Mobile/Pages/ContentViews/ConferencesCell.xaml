@@ -1,15 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ViewCell 
 	xmlns="http://xamarin.com/schemas/2014/forms" 
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	xmlns:local="clr-namespace:TekConf.Mobile;assembly=TekConf.Mobile"
 	xmlns:c="clr-namespace:TekConf.Mobile.Controls;assembly=TekConf.Mobile" 
 	x:Class="TekConf.Mobile.ConferencesCell">
 
-	<StackLayout Padding="10,0,5,0">
-		<c:ListItemTitleLabel Text="{Binding Name}" />
-		<c:ListItemDefaultLabel Text="{Binding DateRange}" />
-		<c:ListItemDefaultLabel Text="{Binding Location}" />
+	<StackLayout Padding="5,0,5,0" VerticalOptions="CenterAndExpand">
+		<Frame OutlineColor="#72c02c" VerticalOptions="CenterAndExpand">
+			<StackLayout>
+				<Image Source="{Binding ImageUrl}" HorizontalOptions="CenterAndExpand" />
+				<c:ListItemTitleLabel Text="{Binding Name}" HorizontalOptions="CenterAndExpand" />
+				<c:ListItemDefaultLabel Text="{Binding DateRange}" HorizontalOptions="CenterAndExpand" />
+				<c:ListItemDefaultLabel Text="{Binding Location}" HorizontalOptions="CenterAndExpand" />
+			</StackLayout>
+		</Frame>
 	</StackLayout>
-
 </ViewCell>
