@@ -1,5 +1,7 @@
 ﻿using System.Threading.Tasks;
 using TekConf.Mobile.Models;
+using TekConf.Mobile.Controls;
+using Xamarin.Forms;
 
 namespace TekConf.Mobile
 {
@@ -12,8 +14,11 @@ namespace TekConf.Mobile
 		{
 			InitializeComponent ();
 
+			conferencesList.RefreshCommand = this.ViewModel.RefreshCommand;
+
 			Init ();
 
+			this.stack.Children.Add (conferencesList);
 			conferencesList.ItemSelected += async (sender, e) => {
 				if (e != null && e.SelectedItem != null) {
 					var conference = e.SelectedItem as Conference;

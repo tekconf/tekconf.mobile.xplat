@@ -7,15 +7,19 @@
 	x:Class="TekConf.Mobile.ConferencesPage" 
 	Title="Conferences">
 
-	<StackLayout>
+	<StackLayout x:Name="stack">
 		<Label Text="Loading" IsVisible="{Binding IsLoading}" />
 	
-		<ListView ItemsSource="{Binding Conferences}" x:Name="conferencesList" RowHeight="150">
-			<ListView.ItemTemplate>
+		<c:PullToRefreshListView x:Name="conferencesList" RowHeight="150" 
+					IsRefreshing="{Binding IsLoading}"
+					ItemsSource="{Binding Conferences}"
+					Message="loading...">
+			<c:PullToRefreshListView.ItemTemplate>
 				<DataTemplate>
 					<local:ConferencesCell></local:ConferencesCell>
 				</DataTemplate>
-			</ListView.ItemTemplate>
-		</ListView>
+			</c:PullToRefreshListView.ItemTemplate>
+		</c:PullToRefreshListView>
+
 	</StackLayout>
 </local:ConferencesPageBase>

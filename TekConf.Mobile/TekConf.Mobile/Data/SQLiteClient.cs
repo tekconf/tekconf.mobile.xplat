@@ -64,9 +64,9 @@ namespace TekConf.Mobile
 					await Task.Run (() => _syncConnection.InsertWithChildren (conference)).ConfigureAwait (false);
 					foreach (var session in conference.Sessions) {
 						foreach (var speaker in session.Speakers) {
-							speaker.Session = session;
-							speaker.SessionId = session.Id;
-							await Task.Run (() => _syncConnection.Insert (speaker)).ConfigureAwait (false);
+//							speaker.Session = session;
+//							speaker.SessionId = session.Id;
+//							await Task.Run (() => _syncConnection.Insert (speaker)).ConfigureAwait (false);
 						}
 					}
 				
@@ -75,9 +75,9 @@ namespace TekConf.Mobile
 					await Task.Run (() => _syncConnection.InsertOrReplaceWithChildren (conference)).ConfigureAwait (false);
 					foreach (var session in conference.Sessions) {
 						foreach (var speaker in session.Speakers) {
-							speaker.Session = session;
-							speaker.SessionId = session.Id;
-							await Task.Run (() => _syncConnection.InsertOrReplace (speaker)).ConfigureAwait (false);
+//							speaker.Session = session;
+//							speaker.SessionId = session.Id;
+//							await Task.Run (() => _syncConnection.InsertOrReplace (speaker)).ConfigureAwait (false);
 						}
 					}
 				}

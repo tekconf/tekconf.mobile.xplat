@@ -36,7 +36,9 @@ namespace TekConf.Mobile
 		{
 			if (this.ViewModel.Conference != null
 			    && this.ViewModel.Conference.Latitude.HasValue
-			    && this.ViewModel.Conference.Longitude.HasValue) {
+			    && this.ViewModel.Conference.Longitude.HasValue
+				&& this.ViewModel.Conference.Latitude.Value !=  default(double)
+				&& this.ViewModel.Conference.Longitude.Value != default(double)) {
 
 
 				var position = new Position (
@@ -60,7 +62,7 @@ namespace TekConf.Mobile
 						new Position (
 							this.ViewModel.Conference.Latitude.Value, 
 							this.ViewModel.Conference.Longitude.Value
-						), Distance.FromMiles (1)
+						), Distance.FromMiles (10)
 					)
 				);
 			}

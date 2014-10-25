@@ -28,10 +28,10 @@ namespace TekConf.Mobile.Models
 //		[ManyToMany(typeof(SessionSpeaker))]
 //		public List<Session> Sessions { get; set; } 
 
-		[ForeignKey(typeof(Session))]
-		public int SessionId { get; set; }
-
-		[ManyToOne]
-		public Session Session { get; set; }
+//		[ForeignKey(typeof(Session))]
+//		public int SessionId { get; set; }
+//
+//		[ManyToOne]
+//		public Session Session { get; set; }
 	}	
 }

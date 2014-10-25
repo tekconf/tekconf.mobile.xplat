@@ -62,7 +62,8 @@ namespace TekConf.Mobile.Models
 //
 //		public DateTime? LastUpdated { get; set; }
 
-		[OneToMany(CascadeOperations = CascadeOperation.All)]
+		//[OneToMany(CascadeOperations = CascadeOperation.All)]
+		[Ignore]
 		public List<Session> Sessions { get; set; }
 
 //		public List<string> Rooms { get; set; }

@@ -27,7 +27,7 @@
 			<ListView ItemsSource="{Binding Conference.Sessions}" x:Name="conferenceSessionsList">
 				<ListView.ItemTemplate>
 					<DataTemplate>
-						<TextCell Text="{Binding Title}"></TextCell>
+						<local:SessionListCell></local:SessionListCell>
 					</DataTemplate>
 				</ListView.ItemTemplate>
 			</ListView>
