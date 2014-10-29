@@ -42,11 +42,11 @@ namespace TekConf.Mobile.Models
 //
 //		public List<string> Prerequisites { get; set; }
 
-//		[ForeignKey(typeof(Conference))]
-//		public int ConferenceId { get; set; }
+		[ForeignKey(typeof(Conference))]
+		public int ConferenceId { get; set; }
 
-//		[ManyToOne]
-//		public Conference Conference { get; set; }
+		[ManyToOne]
+		public Conference Conference { get; set; }
 
 		//[OneToMany(CascadeOperations = CascadeOperation.All)]
 		[Ignore]

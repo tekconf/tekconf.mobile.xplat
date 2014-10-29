@@ -113,12 +113,12 @@
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Compile Include="Data\SQLiteClient.cs" />
-    <Compile Include="IoC.cs" />
     <Compile Include="AkavacheSqliteLinkerOverride.cs" />
-    <Compile Include="FormsUIRefreshControl.cs" />
-    <Compile Include="CustomRenderers\iOSMapRenderer.cs" />
-    <Compile Include="CustomRenderers\PullToRefreshListViewRenderer.cs" />
+    <Compile Include="ProjectSpecific\Data\SQLiteClient.cs" />
+    <Compile Include="ProjectSpecific\CustomRenderers\iOSMapRenderer.cs" />
+    <Compile Include="ProjectSpecific\CustomRenderers\PullToRefreshListViewRenderer.cs" />
+    <Compile Include="ProjectSpecific\FormsUIRefreshControl.cs" />
+    <Compile Include="ProjectSpecific\IoC.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TekConf.Mobile\TekConf.Mobile.csproj">
@@ -215,8 +215,7 @@
     </XamarinComponentReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\" />
-    <Folder Include="CustomRenderers\" />
+    <Folder Include="ProjectSpecific\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\appicon.png" />

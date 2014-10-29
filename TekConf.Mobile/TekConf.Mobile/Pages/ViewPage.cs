@@ -23,6 +23,7 @@ namespace TekConf.Mobile
 			}
 
 			this.Padding = new Thickness (0, Device.OnPlatform (20, 0, 0), 0, 0);
+			this.BackgroundColor = Color.White;
 		}
 	}	
 }

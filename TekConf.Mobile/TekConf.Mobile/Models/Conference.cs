@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System;
 using SQLite.Net.Attributes;
+using SQLiteNetExtensions.Attributes;
 
 namespace TekConf.Mobile.Models
 {
@@ -60,8 +61,7 @@ namespace TekConf.Mobile.Models
 
 		public DateTime? LastUpdated { get; set; }
 
-		//[OneToMany(CascadeOperations = CascadeOperation.All)]
-		[Ignore]
+		[OneToMany(CascadeOperations = CascadeOperation.All)]
 		public List<Session> Sessions { get; set; }
 
 //		public List<string> Rooms { get; set; }
