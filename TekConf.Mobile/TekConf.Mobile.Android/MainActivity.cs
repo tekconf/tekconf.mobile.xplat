@@ -7,8 +7,9 @@ using Xamarin.Forms;
 
 namespace TekConf.Mobile.Droid
 {
-	[Activity (Label = "TekConf", MainLauncher = true, Icon="@drawable/Icon", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class MainActivity : AndroidActivity
+	[Activity (Label = "TekConf", MainLauncher = true, Icon="@drawable/Icon", 
+		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -20,9 +21,11 @@ namespace TekConf.Mobile.Droid
 			IoC.Initialize ();
 			Insights.Initialize (App.InsightsKey, this);
 
-			Forms.Init (this, bundle);
+			base.OnCreate (bundle);
 
-			SetPage (App.GetMainPage ());
+			global::Xamarin.Forms.Forms.Init (this, bundle);
+
+			LoadApplication (new App ()); // method is new in 1.3
 		}
 	}
 }

@@ -3,8 +3,8 @@ using Xamarin.Forms;
 using TekConf.Mobile.iOS;
 using Xamarin.Forms.Maps;
 using Xamarin.Forms.Maps.iOS;
-using MonoTouch.CoreLocation;
-using MonoTouch.ObjCRuntime;
+using CoreLocation;
+using ObjCRuntime;
 #endregion
 
 [assembly:ExportRendererAttribute (typeof(Map), typeof(iOSMapRenderer))]

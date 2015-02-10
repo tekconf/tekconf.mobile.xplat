@@ -1,4 +1,4 @@
-﻿using Xamarin.Forms;
+using Xamarin.Forms;
 using TekConf.Mobile.iOS.Data;
 using System;
 using SQLite.Net.Async;

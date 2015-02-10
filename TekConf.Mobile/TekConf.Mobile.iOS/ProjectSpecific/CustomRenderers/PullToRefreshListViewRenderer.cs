@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using Xamarin.Forms.Platform.iOS;
 using Xamarin.Forms;
 using TekConf.Mobile.Controls;
 using TekConf.Mobile.iOS;
-using MonoTouch.UIKit;
+using UIKit;
 using Xamarin.Forms.Maps;
 using Xamarin.Forms.Maps.iOS;
-using MonoTouch.CoreLocation;
+using CoreLocation;
 
 
 [assembly:ExportRendererAttribute (typeof(PullToRefreshListView), typeof(PullToRefreshListViewRenderer))]

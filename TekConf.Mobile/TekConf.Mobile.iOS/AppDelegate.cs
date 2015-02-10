@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using Xamarin.Forms;
 using Xamarin;
 
 namespace TekConf.Mobile.iOS
 {
 	[Register("AppDelegate")]
-	public partial class AppDelegate : UIApplicationDelegate
+	public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
 	{
 		UIWindow window;
 
@@ -26,16 +26,12 @@ namespace TekConf.Mobile.iOS
 
 			IoC.Initialize ();
 
-			Forms.Init();
+			Forms.Init ();
 			FormsMaps.Init();
 
-			window = new UIWindow(UIScreen.MainScreen.Bounds);
+			LoadApplication (new App ());  // method is new in 1.3
 
-			window.RootViewController = App.GetMainPage().CreateViewController();
-
-			window.MakeKeyAndVisible();
-
-			return true;
+			return base.FinishedLaunching (app, options);
 		}
 	}
 }

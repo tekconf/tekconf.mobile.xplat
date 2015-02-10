@@ -3,7 +3,7 @@ using Akavache.Sqlite3;
 
 // Note: This class file is *required* for iOS to work correctly, and is 
 // also a good idea for Android if you enable "Link All Assemblies".
-using MonoTouch.UIKit;
+using UIKit;
 using Xamarin.Forms;
 
 
@@ -37,7 +37,7 @@ namespace TekConf.Mobile.iOS
 				if (string.IsNullOrWhiteSpace (message))
 					return;
 
-				this.AttributedTitle = new MonoTouch.Foundation.NSAttributedString(message);
+				this.AttributedTitle = new Foundation.NSAttributedString(message);
 			}
 		}
 
