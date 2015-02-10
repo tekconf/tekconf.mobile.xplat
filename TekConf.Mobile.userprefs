@@ -1,14 +1,6 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.MonoForAndroid_API_15" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TekConf.Mobile/TekConf.Mobile/Pages/ConferenceDetail/ConferenceDetailPage.xaml.cs">
-    <Files>
-      <File FileName="TekConf.Mobile/TekConf.Mobile/Pages/ConferencesList/ConferencesPage.xaml" Line="1" Column="1" />
-      <File FileName="TekConf.Mobile/TekConf.Mobile.iOS/ProjectSpecific/CustomRenderers/iOSMapRenderer.cs" Line="1" Column="1" />
-      <File FileName="TekConf.Mobile/TekConf.Mobile.iOS/ProjectSpecific/CustomRenderers/PullToRefreshListViewRenderer.cs" Line="1" Column="1" />
-      <File FileName="TekConf.Mobile/TekConf.Mobile/Pages/ConferenceDetail/ConferenceDetailPage.xaml" Line="1" Column="1" />
-      <File FileName="TekConf.Mobile/TekConf.Mobile/Pages/ConferenceDetail/ConferenceDetailPage.xaml.cs" Line="3" Column="3" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+﻿<Properties StartupItem="TekConf.Mobile/TekConf.Mobile.iOS/TekConf.Mobile.iOS.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone4s.8.1" />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
